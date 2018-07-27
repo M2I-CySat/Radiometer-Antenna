@@ -1,8 +1,8 @@
 (export (version D)
   (design
     (source /home/william/Documents/Classwork/AroE294/Radiometer-Antenna/AntennaPcb/AntennaPcb.sch)
-    (date "Fri 20 Jul 2018 02:41:49 PM CDT")
-    (tool "Eeschema 4.0.7")
+    (date "Thu 26 Jul 2018 09:51:10 PM CDT")
+    (tool "Eeschema 5.0.0")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
         (title)
