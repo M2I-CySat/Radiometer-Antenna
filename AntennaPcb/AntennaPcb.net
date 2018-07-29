@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source /home/william/Documents/Classwork/AroE294/Radiometer-Antenna/AntennaPcb/AntennaPcb.sch)
-    (date "Thu 26 Jul 2018 09:51:10 PM CDT")
+    (date "Sat 28 Jul 2018 11:04:12 PM CDT")
     (tool "Eeschema 5.0.0")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -14,7 +14,52 @@
         (comment (number 2) (value ""))
         (comment (number 3) (value ""))
         (comment (number 4) (value "")))))
-  (components)
-  (libparts)
-  (libraries)
-  (nets))
+  (components
+    (comp (ref AE1)
+      (value Antenna)
+      (footprint AntennaPcb:AntennaPatch)
+      (libsource (lib device) (part Antenna) (description "Antenna symbol"))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 5B5D3AE4))
+    (comp (ref J1)
+      (value Conn_01x02)
+      (footprint 1909763-1:TE_1909763-1)
+      (datasheet ~)
+      (libsource (lib conn) (part Conn_01x02) (description "Generic connector, single row, 01x02"))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 5B5D3D4D)))
+  (libparts
+    (libpart (lib conn) (part Conn_01x02)
+      (description "Generic connector, single row, 01x02")
+      (docs ~)
+      (footprints
+        (fp Connector*:*_??x*mm*)
+        (fp Connector*:*1x??x*mm*)
+        (fp Pin?Header?Straight?1X*)
+        (fp Pin?Header?Angled?1X*)
+        (fp Socket?Strip?Straight?1X*)
+        (fp Socket?Strip?Angled?1X*))
+      (fields
+        (field (name Reference) J)
+        (field (name Value) Conn_01x02))
+      (pins
+        (pin (num 1) (name Pin_1) (type passive))
+        (pin (num 2) (name Pin_2) (type passive))))
+    (libpart (lib device) (part Antenna)
+      (description "Antenna symbol")
+      (fields
+        (field (name Reference) AE)
+        (field (name Value) Antenna))
+      (pins
+        (pin (num 1) (name A) (type input)))))
+  (libraries
+    (library (logical conn)
+      (uri /usr/share/kicad/library/conn.lib))
+    (library (logical device)
+      (uri /usr/share/kicad/library/device.lib)))
+  (nets
+    (net (code 1) (name GND)
+      (node (ref J1) (pin 2)))
+    (net (code 2) (name "Net-(AE1-Pad1)")
+      (node (ref AE1) (pin 1))
+      (node (ref J1) (pin 1)))))
