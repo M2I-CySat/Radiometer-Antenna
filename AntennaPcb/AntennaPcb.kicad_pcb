@@ -2,7 +2,7 @@
 
   (general
     (thickness 1.6)
-    (drawings 4)
+    (drawings 6)
     (tracks 1)
     (zones 0)
     (modules 7)
@@ -2764,6 +2764,12 @@
     (pad 1 thru_hole circle (at 0 0) (size 4.064 4.064) (drill 3.048) (layers *.Cu *.Mask))
   )
 
+  (gr_text "of Bruce" (at 124.46 95.504) (layer F.SilkS)
+    (effects (font (size 1 1) (thickness 0.25)))
+  )
+  (gr_text "In Loving Memory " (at 124.968 93.472) (layer F.SilkS)
+    (effects (font (size 1 1) (thickness 0.25)))
+  )
   (gr_line (start 169.60152 141.913524) (end 169.60152 51.910482) (layer Edge.Cuts) (width 0.1))
   (gr_line (start 79.598478 141.913524) (end 169.60152 141.913524) (layer Edge.Cuts) (width 0.1))
   (gr_line (start 169.60152 51.910482) (end 79.598478 51.910482) (layer Edge.Cuts) (width 0.1))
